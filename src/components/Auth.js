@@ -2,15 +2,14 @@ import React from "react";
 import { useDispatch } from "react-redux";
 
 import "./Auth.css";
-import { authActions } from "../Reducers/index";
+import { login } from "../Reducers/index";
 
 const Auth = () => {
   const dispatch = useDispatch();
-  console.log(authActions);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // dispatch(authActions.login());
+    dispatch(login());
   };
 
   return (

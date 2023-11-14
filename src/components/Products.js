@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./Product";
+import { useDispatch } from "react-redux";
 const DUMMY_PRODUCTS = [
   {
     id: 1,
@@ -37,7 +38,9 @@ const DUMMY_PRODUCTS = [
     price: 25,
   },
 ];
+
 const Products = () => {
+  const dispatch = useDispatch()
   return (
     <div>
       <ul className="products-container">
@@ -48,6 +51,7 @@ const Products = () => {
               name={product.name}
               imgURL={product.imgURL}
               price={product.price}
+              
             />
           </li>
         ))}
